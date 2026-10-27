@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Librería «El Saber» – Catálogo en línea</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1>📚 Librería «El Saber»</h1>
+    <p>Consulta nuestros productos y arma tu lista de compras</p>
+  </header>
+
+  <main class="contenedor">
+    <section class="catalogo" aria-label="Catálogo de productos">
+      <div class="controles">
+        <label for="buscador" class="sr-only">Buscar producto</label>
+        <input type="search" id="buscador" placeholder="Buscar producto...">
+
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por categoría">
+          <button class="filtro activo" data-cat="todos">Todos</button>
+          <button class="filtro" data-cat="Cuadernos">Cuadernos</button>
+          <button class="filtro" data-cat="Libros">Libros</button>
+          <button class="filtro" data-cat="Papelería">Papelería</button>
+          <button class="filtro" data-cat="Tecnología">Tecnología</button>
+        </div>
+      </div>
+
+      <div class="grid-productos" id="catalogo"></div>
+      <p class="vacio" id="sin-resultados" hidden>No se encontraron productos.</p>
+    </section>
+
+    <aside class="panel-lista" aria-label="Mi lista">
+      <h2>🛒 Mi lista</h2>
+      <ul id="lista"></ul>
+      <p class="vacio" id="lista-vacia">Tu lista está vacía.</p>
+      <div class="total">
+        <span>Total estimado:</span>
+        <strong id="total">$0</strong>
+      </div>
+      <button class="btn btn-vaciar" id="vaciar">Vaciar lista</button>
+    </aside>
+  </main>
+
+  <footer class="pie">
+    <p>© 2026 Librería «El Saber» · Catálogo informativo, sin pagos en línea</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
